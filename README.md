@@ -1,12 +1,13 @@
-mvcblog-front
+Meet Poll (extended) 
 =============
-A "single-page" application for
-[mvcblog](https://github.com/lipido/mvcblog) based on
-[fronty.js](https://github.com/lipido/fronty.js),
-[jQuery.js](https://jquery.com/) and [Handlebars](http://handlebarsjs.com/), for
-educational purposes.
+Extended web application of its [first version](https://github.com/ivanddios/meetPoll)
 
-This front-end of [mvcblog](https://github.com/lipido/mvcblog) uses JavaScript
+## Extension
+[meetPoll](https://github.com/ivanddios/meetPoll) based on
+[fronty.js](https://github.com/lipido/fronty.js),
+[jQuery.js](https://jquery.com/) and [Handlebars](http://handlebarsjs.com/)
+
+This front-end of [meetPoll](https://github.com/ivanddios/meetPoll) uses JavaScript
 and AJAX and interacts with the backend via its REST API.
 
 ## Architecture overview
@@ -29,9 +30,9 @@ in `js/i18n` folder.
 
 A quick installation process could be:
 
-1. Download and install [mvcblog](https://github.com/lipido/mvcblog), the
+1. Download and install [meetPoll]((https://github.com/ivanddios/meetPoll), the
    backend-app (you will need a PHP-enabled server and MySQL).
 2. Download
-[mvcblog-front](https://github.com/lipido/mvcblog/archive/master.zip) and copy
+[meetPoll-front](https://github.com/ivanddios/meetPoll/archive/master.zip) and copy
 it inside the backend app, for example in `/frontend`.
-3. Start your server and access it: http://localhost/mvcblog/frontend/index.html.
+3. Start your server and access it: http://localhost/meetPoll/frontend/index.html.

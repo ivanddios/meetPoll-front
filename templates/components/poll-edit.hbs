@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row center-row">
+		<div class="col-lg-6 center-block">
+			<div id="subtitlePoll">
+			  {{i18n 'Do you want to change something?'}}
+			</div>
+			<div class="col-lg-12 center-block2">
+					<div id="requiredInput">
+						<div class="inputWithIconLogin inputIconBg">
+              <input type="text" id="title" placeholder="{{i18n 'What is the matter about?'}}"  value="{{selectedPoll.title}}" required>
+							<i class="fa fa-reorder fa-lg fa-fw" aria-hidden="true"></i>
+						</div>
+						<div id="lblBox">
+					    {{i18n 'Mandatory'}}
+						</div>
+					</div>
+
+          {{#if errors.title}}
+            <div class="alert alert-danger text-center" id="success-danger" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              {{#i18n}}{{errors.title}}{{/i18n}}<br>
+            </div>
+          {{/if}}
+          <div id="optionalInput">
+						<div class="inputWithIconLogin inputIconBg">
+							<input type="text" id="ubication" placeholder="{{i18n 'Where are you going to celebrate?'}}" value="{{selectedPoll.ubication}}">
+							<i class="fa fa-map-marker fa-lg fa-fw" aria-hidden="true"></i>
+						</div><br>
+          {{#if errors.ubication}}
+            <div class="alert alert-danger text-center" id="success-danger" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              {{#i18n}}{{errors.ubication}}{{/i18n}}<br>
+            </div>
+          {{/if}}
+
+            <div class="inputWithIconLogin inputIconBg">
+              <input type="text" placeholder="http://localhost/meetPoll_TSW/frontend/index.html#view-poll?link={{selectedPoll.link}}" readonly>
+              <i class="fa fa-link fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
+					</div>
+					<a href="#polls" class="backButton">{{i18n 'Back'}}</a>
+					<button id="editPoll" type="submit" class="btn-dark">{{i18n 'Save'}}</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+

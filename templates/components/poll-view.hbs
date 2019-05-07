@@ -1,0 +1,76 @@
+<span>
+    {{#if message}}
+        <div class="alert alert-success text-center" id="success-alert" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{message}}
+        </div>
+    {{/if}}
+    <div class="container">
+        <div class="row center-row">
+            <div class="col-lg-12 center-block">
+                {{#if assignations.message}}
+                    <div class="alert alert-success text-center" id="success-alert" role="alert">
+                        {{assignations.message}}
+                    </div>
+                {{/if}}
+                <div id="subtitleView">
+                    {{selectedPoll.title}}
+                </div>
+                <div id="subsubtitle">
+                    {{i18n "by "}}{{selectedPoll.author}} {{#if selectedPoll.ubication}} {{i18n " - "}}{{i18n "At "}}{{selectedPoll.ubication}} {{/if}}
+                </div>
+                <div id="link">
+                    <div id="inputLink" class="inputWithIconLogin inputIconBg">
+                        <input type="text" placeholder="http://localhost/meetPoll_TSW/frontend/index.html#view-poll?link={{selectedPoll.link}}" readonly>
+                        <i class="fa fa-link fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-lg-12 center-block2">
+
+                        {{#if_eq gaps.selectedGap.length 0}}
+                            <div id="messageView">
+                                {{i18n "There are not gaps!" }}
+                                {{#if_eq selectedPoll.author user.currentUser}}
+                                    {{i18n "Add it "}} <a href="#add-gaps?link={{selectedPoll.link}}" item="{{selectedPoll.link}}"> {{i18n "here"}} </a>
+                                {{/if_eq}}
+                            </div>
+                        {{else if_eq assignations.selectedAssignation.length 0}}
+                            <div id="messageView">
+                                {{i18n "There are not participations! Be the first to do it!"}}
+                            </div>
+                        {{/if_eq}}
+
+                        {{#if_max assignations.selectedAssignation.length 0}}
+                            <table id="dataTable" class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        {{#each assignations.selectedAssignation as |assignation|}}
+                                            {{#if_eq assignation.participant ../user.currentUser}}
+                                                <th id="{{user.currentUser}}" scope="col"> {{i18n "You"}}</th>
+                                            {{else }}
+                                                <th id="{{assignation.participant}}" scope="col"> {{assignation.participant}} </th>
+                                            {{/if_eq}}
+                                        {{/each}}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each gaps.selectedGap as |gap|}}
+                                        <tr fronty-component="PollViewRowComponent" key="{{gap.id}}" id="gap-item-{{gap.id}}" model="gaps.selectedGap[{{@index}}]"></tr>
+                                    {{/each}}
+                                </tbody> 
+                            </table>
+                        {{/if_max}}
+
+                    <a href="#polls" class="backButton">{{i18n 'Back'}}</a>
+                    {{#if assignations.selectedParticipation }}
+                        <button id="modifyAssignation" item="{{selectedPoll.link}}" type="submit" class="btn btn-dark">{{i18n "Modify"}}</button>
+                    {{else}}
+                        <button id="addAssignation" item="{{selectedPoll.link}}" type="submit" class="btn btn-dark">{{i18n "Take part"}}</button>
+                    {{/if}}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</span>

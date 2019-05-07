@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row center-row">
+        <div class="col-lg-6 center-block">
+            <div id="subtitlePoll">
+                {{i18n 'Some data to start...'}}
+            </div>
+            <div class="col-lg-12 center-block2">
+                <div id="requiredInput">
+                    <div class="inputWithIconLogin inputIconBg">
+                        <input type="text" id="title" placeholder="{{i18n 'What is the matter about?'}}" required>
+                        <i class="fa fa-reorder fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                    <div id="lblBox">
+                        {{i18n 'Mandatory'}}
+                    </div>
+                </div>
+
+                {{#if errors.title}}
+                <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    {{#i18n}}{{errors.title}}{{/i18n}}<br>
+                </div>
+                {{/if}}
+                <div id="optionalInput">
+                    <div class="inputWithIconLogin inputIconBg">
+                        <input type="text" id="ubication" placeholder="{{i18n 'Where are you going to celebrate?'}}">
+                        <i class="fa fa-map-marker fa-lg fa-fw" aria-hidden="true"></i>
+                    </div><br>
+                    {{#if errors.ubication}}
+                    <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{#i18n}}{{errors.ubication}}{{/i18n}}<br>
+                    </div>
+                    {{/if}}
+                </div>
+                <a href="#polls" class="backButton">{{i18n 'Back'}}</a>
+                <button id="addPoll" type="submit" class="btn-dark">{{i18n 'Save'}}</button>
+            </div>
+        </div>
+    </div>
+</div>

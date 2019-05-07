@@ -1,0 +1,73 @@
+<span>
+    {{#if message}}
+        <div class="alert alert-success text-center" id="success-alert" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{message}}
+        </div>
+    {{/if}}
+    <div class="container">
+        <div class="row center-row">
+            <div class="col-lg-6 center-block-login">
+                <div id="subtitleLogin">
+                    <a class="navbar-brand" href="#"><img src="/meetPoll_TSW/img/logo.png" alt="logo" class="logoLogin"></a>
+                    <h5><br>{{i18n 'Sign in to MeetPoll'}}</h5>
+                </div>
+                <div class="col-lg-12 center-block2">
+                    <div id="inputLogin">
+                        <div class="inputWithIconLogin inputIconBg">
+                            <input type="text" id="username" value="{{currentUser}}" readonly>
+                            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="inputWithIconLogin inputIconBg">
+                            <input type="password" id="passwd" placeholder="{{i18n 'New password'}}">
+                            <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+                        {{#if error.passwd}}
+                            <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                {{#i18n}}{{error.passwd}}{{/i18n}}<br>
+                            </div>
+                        {{/if}}
+
+                        <div class="inputWithIconLogin inputIconBg">
+                            <input type="password" id="confirmPasswd" placeholder="{{i18n 'Confirm the password'}}">
+                            <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+                        {{#if error.confirmPasswd}}
+                            <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                {{#i18n}}{{error.confirmPasswd}}{{/i18n}}<br>
+                            </div>
+                        {{/if}}
+
+                        <div class="inputWithIconLogin inputIconBg">
+                            <input type="text" id="email" value="{{selectedUser.email}}" placeholder="{{i18n 'Email'}}">
+                            <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                        </div><br>
+                        {{#if loginError.email}}
+                            <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                {{#i18n}}{{loginError.email}}{{/i18n}}<br>
+                            </div>
+                        {{/if}}
+
+                        <div class="inputWithIconLogin inputIconBg">
+                            {{#if_eq selectedUser.notification 1}}
+                                <input type="checkbox" id="notifications" class="checkbox" checked/>
+                            {{else}}
+                                <input type="checkbox" id="notifications" class="checkbox"/>
+                            {{/if_eq}}
+                            <span>{{i18n 'Receive Notifications'}}&nbsp;</span>
+                        </div><br>
+
+                        <button type="submit" id="modifyprofile" class="loginButton btn btn-darkLogin">{{i18n 'Edit'}}</button>
+                        {{i18n 'Do you want to delete your account?Delete '}}<a id="dropOut" class="font-weight-light" href="">{{i18n 'here'}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>
+
+
+
+

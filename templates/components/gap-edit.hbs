@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row center-row">
+        <div class="col-lg-12 center-block">
+            {{#if errors}}
+               <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                    {{errors}}
+                </div>
+            {{/if}}
+            <div id="subtitle">
+                {{i18n 'What free days do you have?'}}
+            </div>
+            <div id="link">
+                <div id="inputLink" class="inputWithIconLogin inputIconBg">
+                    <input type="hidden" id="poll-link" value="{{polls.selectedPoll.link}}" readonly>
+                </div>
+            </div>
+            <div class="col-lg-12 center-block2">
+                <table id="dataTable" class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col"><button type="button" class="btn btn-success" id="addrow-button" value="+">+</button></th>
+                            <th scope="col">{{i18n 'Date'}}</th>
+                            <th scope="col">{{i18n 'Start'}}</th>
+                            <th scope="col">{{i18n 'End'}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#if selectedGap}}
+                            {{#each selectedGap as |gap|}}
+                                    <tr id="gap-item-{{gap.id}}">
+                                        <td></td>
+                                        <td>
+                                            <div class="inputDate">
+                                                <div class="inputWithIconLogin inputIconBg">
+                                                    <input type="text" id="date-item-{{gap.id}}" class ="date" value="{{gap.date}}" required>
+                                                    <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="inputTime">
+                                                <div class="inputWithIconLogin inputIconBg">
+                                                    <input type="text" id="timeStart-item-{{gap.id}}" class="timeStart" value="{{gap.timeStart}}" required>
+                                                    <i class="fa fa-clock-o fa-lg fa-fw" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="inputTime">
+                                                <div class="inputWithIconLogin inputIconBg">
+                                                    <input type="text" id="timeEnd-item-{{gap.id}}" class="timeEnd" value="{{gap.timeEnd}}" required>
+                                                    <i class="fa fa-clock-o fa-lg fa-fw" aria-hidden="true"></i>    
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="delrow btn btn-danger" item="{{gap.id}}">-</button>
+                                        </td>
+                                    </tr>
+                            {{/each}} 
+                        {{/if}} 
+
+                        {{#each emptyGaps}}
+                            <tr fronty-component="GapRowComponent" key="{{gap}}" model="gaps" id="new-gap-item-{{gap}}"></tr>
+                        {{/each}}
+                        
+                    </tbody>
+                </table>
+                <a href="#polls" class="backButton">{{i18n 'Back'}}</a>
+                <button type="submit" id="editGap" class="btn btn-dark">{{i18n 'Continue'}}</button>
+            </div>
+        </div>
+    </div>
+</div>

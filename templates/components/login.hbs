@@ -1,0 +1,84 @@
+<span>
+    {{#if dropOut}}
+        <div class="alert alert-success text-center" id="success-success" role="alert">
+            {{#i18n}}{{dropOut}}{{/i18n}}<br>
+        </div>
+    {{/if}}
+    {{#if isLogged}}
+        {{i18n 'Your are logged. Logout first'}}
+    {{else}}
+        {{#if message}}
+            <div class="alert alert-success text-center" id="success-alert" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                {{message}}
+            </div>
+        {{/if}}
+        <div class="container">
+            <div class="row center-row">
+                <div class="col-lg-6 center-block-login">
+                    <div id="subtitleLogin">
+                        <a class="navbar-brand" href="#"><img src="/meetPoll_TSW/img/logo.png" alt="logo" class="logoLogin"></a>
+                        <h5><br>{{i18n 'Sign in to MeetPoll'}}</h5>
+                    </div>
+                    <div class="col-lg-12 center-block2">
+                        <div id="inputLogin">
+                            <div class="inputWithIconLogin inputIconBg">
+                                <input type="text" id="username" placeholder="{{i18n 'Username'}}">
+                                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                            </div>
+                                {{#if loginError.username}}
+                                    <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                        {{#i18n}}{{loginError.username}}{{/i18n}}<br>
+                                    </div>
+                                {{/if}}
+                            <div class="inputWithIconLogin inputIconBg">
+                                <input type="password" id="passwd" placeholder="{{i18n 'Password'}}">
+                                <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                            </div>
+                                {{#if loginError.passwd}}
+                                    <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                        {{#i18n}}{{loginError.passwd}}{{/i18n}}<br>
+                                    </div>
+                                {{/if}}
+                            {{#if registerMode}}
+                                <div class="inputWithIconLogin inputIconBg">
+                                    <input type="password" id="confirmPasswd" placeholder="{{i18n 'Confirm the password'}}">
+                                    <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                                </div>
+                                {{#if loginError.ConfirmPasswd}}
+                                    <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                        {{#i18n}}{{loginError.ConfirmPasswd}}{{/i18n}}<br>
+                                    </div>
+                                {{/if}}
+
+                                 <div class="inputWithIconLogin inputIconBg">
+                                    <input type="text" id="email" placeholder="{{i18n 'Email'}}">
+                                    <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                                </div><br>
+                                {{#if loginError.email}}
+                                    <div class="alert alert-danger text-center" id="success-danger" role="alert">
+                                        {{#i18n}}{{loginError.email}}{{/i18n}}<br>
+                                    </div>
+                                {{/if}}
+
+                                <div class="inputWithIconLogin inputIconBg">
+                                    <input type="checkbox" id="notifications" class="checkbox"/>
+                                    <span>{{i18n 'Receive Notifications'}}&nbsp;</span>
+                                </div><br>
+
+                                <button type="submit" id="registerbutton" class="loginButton btn btn-darkLogin">{{i18n 'Register'}}</button>
+                            {{else}}
+                                <button type="submit" id="loginbutton" class="loginButton btn btn-darkLogin">{{i18n 'Sign in'}}</button>
+                                {{i18n 'New to MeetPoll? '}}<a id="registerlink" class="font-weight-light" href="">{{i18n 'Create an account.'}}</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+</span>
+
+
+
+

@@ -1,0 +1,42 @@
+
+<tr id="gap-item-{{id}}">
+     <td>
+        <div id="gap-date-item-{{id}}" class="ytitle"> </div>
+        <div id="gap-time-item-{{id}}" class="ysubtitle">{{timeStart}} - {{timeEnd}} </div>
+    </td>
+
+    {{#each assignations.selectedAssignation as |assignation|}}
+        {{#if_eq assignation.participant ../user.currentUser}}
+            {{#ifIn ../id gaps}}
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" name="assignation" checked value="{{../id}}">
+                        <span class="success"></span>
+                    </label>
+                </td>
+            {{else}}
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" name="assignation" value="{{../id}}">
+                        <span class="success"></span>
+                    </label>
+                </td>
+            {{/ifIn}}
+        {{else}}  
+            {{#ifIn ../id gaps}}
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" checked disabled>
+                        <span class="success"></span>
+                    </label>
+                </td>
+            {{else}}
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                </td>
+            {{/ifIn}}
+        {{/if_eq}}
+    {{/each}}
+</tr>

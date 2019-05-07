@@ -1,0 +1,486 @@
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css";
+
+body {
+	font-family:'K2D','Open Sans', Arial, sans-serif;
+	font-size:14px;
+	font-weight:300;
+	line-height:1.6em;
+	color:#000;
+	background-color:white;
+}
+
+/* HEADER -> NAVBAR */
+
+header{
+	background-color: white;
+	border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+	font-size: 25px;
+}
+.nav-link {
+    padding-left:0;
+}
+
+.navbar-brand {
+    color: #000;
+}
+
+.navbar-collapse{
+	margin-left: 3%;
+}
+
+.navbar-toggler {
+	border-color: #000;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+     color: #000; 
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #000; 
+}
+
+.dropdown-menu{
+	min-width: 0;
+	text-align: center;
+}
+
+#navbarDropdownAccount{
+	color: #000;
+	margin-left: 10px;
+}
+
+#navbarDropdownLang{
+	color: #000;
+	margin-left: 10px;
+}
+
+#navbarDropdown:hover{
+	color: #000;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	color: #000;
+	text-decoration: none;
+	background-color: #fff;
+}
+.logo{
+	height: 40px;
+}
+
+.logoLogin{
+	height: 60px;
+}
+
+.idiomas{
+	padding: 0.5rem;
+	margin-left: 4%;
+}
+
+
+/* BODY BASIC ELEMENTS */
+
+.container {
+	margin: auto;
+}
+
+
+.center-row{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.center-block{
+	float: none;
+	background-color: white;
+	margin-top: 3%;
+	margin-bottom: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	max-width: 80%;
+}
+
+.center-block-login{
+	float: none;
+	background-color: white;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	max-width: 80%;
+}
+
+.center-block2 {
+	  margin: auto;
+	  margin-top: 5%;
+	  margin-bottom: 7%;
+	  overflow-x: auto;
+}
+
+
+#subtitle{
+	margin: auto;
+	margin-top: 4%;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 8%;
+}
+
+#subtitleLogin{
+	margin: auto;
+	margin-top: 4%;
+	text-align: center;
+}
+
+#subtitleView{
+	margin: auto;
+	margin-top: 7%;
+	font-size: 32px;
+	text-align: center;
+}
+
+#subtitlePoll{
+	margin: auto;
+	margin-top: 10%;
+	font-size: 32px;
+	text-align: center;
+}
+
+
+#subsubtitle {
+	margin:auto;
+	margin-top:2%;
+	font-size: 14px;
+	text-align: center;
+	color: grey;
+}
+
+#messageView{
+	margin: auto;
+	margin-bottom: 7%;
+	margin-top: 2%;
+	font-size: 26px;
+	text-align: center;
+}
+
+#link{
+	text-align: center;
+	margin: auto;
+	margin-top: 1%;
+	padding-left:3%;
+	font-size: 14px;
+	width:80%!important;
+}
+
+#requiredInput {
+	margin-top: 4%;
+}
+
+#lblBox{
+	font-size: 70%;
+	padding-left: 1%;
+}
+
+#optionalInput{
+	margin-top: 2%;
+	margin-bottom: 5%;
+}
+
+#loginPerdidaDeDatos{
+	margin-left: 25%;
+}
+
+.font-weight-light{
+  font-size: 13px;
+}
+
+
+
+
+/* INPUTS */
+
+/* TYPE=TEXT  AND TYPE=PASSWORD*/
+
+input[type=text],[type=password]{
+    width:103%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+	transition:.3s;
+	height: 10%!important;
+  }
+
+.inputWithIconLogin input[type=text],[type=password]{
+	padding-left:35px;
+}
+
+
+.inputWithIconLogin{
+	position:relative;
+}
+
+.inputWithIconLogin i{
+	position:absolute;
+	left:0;
+	top:9px;
+	padding:9px 8px;
+	color:#aaa;
+	transition:.3s;
+}
+
+
+.inputWithIconLogin.inputIconBg i{
+	background-color:#aaa;
+	color:#fff;
+	padding:9px 4px;
+	border-radius:4px 0 0 4px;
+}
+
+
+.fa-lg {
+font-size: 1.6em!important;
+line-height: 0.84em;
+height: 2.25rem;
+}
+
+
+.inputWithIconRegister input[type=text],[type=password]{
+padding-left:40px;
+margin-bottom: 6%;
+}
+
+.inputWithIconRegister{
+position:relative;
+}
+
+.inputWithIconRegister i{
+position:absolute;
+left:0;
+top:31px;
+padding:9px 8px;
+color:#aaa;
+transition:.3s;
+}
+
+
+.inputWithIconRegister.inputIconBg i{
+background-color:#aaa;
+color:#fff;
+padding:9px 4px;
+border-radius:4px 0 0 4px;
+}
+ 
+
+.fa-lg {
+    font-size: 1.6em;
+    line-height: 0.84em;
+}
+
+
+#inputLogin{
+
+   width: 50%;
+   margin: auto;
+}
+
+
+#inputLink{
+  	width: 60%;
+  	margin: auto;
+}
+
+.inputDate{
+	margin: auto;
+	width: 60%;
+	margin: auto;
+ }
+
+.inputTime{
+	margin: auto;
+	width: 40%;
+	border: 0;
+}
+
+
+/* TYPE=CHECKBOX */
+
+ @keyframes check {0% {height: 0;width: 0;}
+    25% {height: 0;width: 10px;}
+    50% {height: 20px;width: 10px;}
+  }
+  .checkbox{
+  	background-color:#fff;
+  	display:inline-block;
+  	height:28px;margin:0 .25em;
+  	width:28px;border-radius:4px;
+  	border:1px solid #ccc;
+  }
+
+  .checkbox span{
+  	display:block;
+  	height:28px;
+  	position:relative;
+  	width:28px;
+  	padding:0;
+  }
+  .checkbox span:after{
+  	-moz-transform:scaleX(-1) rotate(135deg);
+  	-ms-transform:scaleX(-1) rotate(135deg);
+  	-webkit-transform:scaleX(-1) rotate(135deg);
+  	transform:scaleX(-1) rotate(135deg);
+  	-moz-transform-origin:left top;
+  	-ms-transform-origin:left top;
+  	-webkit-transform-origin:left top;
+  	transform-origin:left top;
+  	border-right:4px solid #fff;
+  	border-top:4px solid #fff;content:'';
+  	display:block;height:20px;
+  	left:3px;
+  	position:absolute;
+  	top:15px;width:10px
+  }
+  .checkbox span:hover:after{
+  	border-color:#999;
+  }
+  .checkbox input{
+  	display:none;
+  }
+  .checkbox input:checked + span:after{
+  	-webkit-animation:check .8s;
+  	-moz-animation:check .8s;
+  	-o-animation:check .8s;
+  	animation:check .8s;
+  	border-color:#555;
+  }
+.checkbox input:checked + .success:after{
+	border-color:#8bc34a;
+}
+
+
+/* BUTTONS */
+
+.btn-dark{
+	margin-top:20px;
+	margin-bottom:10px;
+	margin-right: 2%;
+	padding:8px;
+	font-size:14px;
+	background-color:#eeee;
+	color:#000;
+	border:none;
+	border-bottom:3px solid #19e6;
+	border-radius:2px;
+	float:right;
+	
+}
+button a{
+	color: black;
+	text-decoration: none;
+}
+
+.loginButton {
+    width: 102%;
+    margin-bottom: 4%;
+}
+
+.btn-darkLogin {
+    margin-bottom: 30px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #eeee;
+    color: #000;
+    border: none;
+    border-bottom: 3px solid #19e6;
+    border-radius: 2px;
+}
+
+
+/* FORMS AND TABLE ELEMENTS */
+
+td{
+	text-align: center; 
+	vertical-align: middle!important;
+}
+
+.ytitle{
+	font-weight: 600;
+}
+
+.ysubtitle {
+	color:grey;
+	font-size: 12px;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+	bottom:0%;
+	max-height: 50%;
+	width: 100%;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+    background-color: white;
+    color: #000;
+	text-align: center; 
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+ul.social-network {
+	padding: 0;
+	text-align:center;	
+}
+
+ul.social-network li {
+	display:inline;
+	margin: 0 10px;
+	margin-top: 2%;
+	color:#000;
+}
+ul.social-network li a {	
+	color:#000;
+	
+}
+
+.copyright {
+	text-align:center;
+	color: #000;
+}
+
+.copyright a {
+	color:#000;
+}
+
+
+
+.zoom{
+	/* Aumentamos la anchura y altura durante 2 segundos */
+	transition: width 2s, height 2s, transform 2s;
+	-moz-transition: width 2s, height 2s, -moz-transform 2s;
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+	-o-transition: width 2s, height 2s,-o-transform 2s;
+}
+
+ .zoom:hover{
+	/* tranformamos el elemento al pasar el mouse por encima al doble de  su tamaño con scale(2). */
+	transform : scale(1.4);
+	-moz-transform : scale(1.4);       
+	-webkit-transform : scale(1.4);    
+	-o-transform : scale(1.4);         
+} 
+
+
+.modal-backdrop {
+    z-index: 0;
+}

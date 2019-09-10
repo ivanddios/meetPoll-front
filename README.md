@@ -1,6 +1,6 @@
 Meet Poll (extended) 
 =============
-Extended web application of its [first version](https://github.com/ivanddios/meetPoll)
+Extended web application of [first version](https://github.com/ivanddios/meetPoll)
 
 ## Extension
 [meetPoll](https://github.com/ivanddios/meetPoll) based on
